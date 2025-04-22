@@ -13,6 +13,9 @@ public class AccountRegistrationPage extends BasePage {
 	
 	
 	
+	@FindBy(xpath="//strong[text()[normalize-space(.) = \"SIGN UP\"]]") WebElement linkSignUp;
+	
+	
 	
 	@FindBy(xpath="//input[@name='email']")WebElement txtEmail;
 	
@@ -40,6 +43,10 @@ public class AccountRegistrationPage extends BasePage {
 	
 	
 	
+	public void clickSignUp() {
+		
+		linkSignUp.click();		
+		}
 	public void setFirstName(String fname) {
 		
 		txtFirstname.sendKeys(fname);

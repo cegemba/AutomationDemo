@@ -5,7 +5,8 @@
   	<parameter name="os" value="MacOS"></parameter>
   	<parameter name="browser" value="chrome"></parameter>
     <classes>
-      <class name="testCases.TC001_AccountRegistrationTest"/>
+     <!--> <class name="testCases.TC001_AccountRegistrationTest"/> -->
+       <class name="testCases.TC002_LoginTest"/>
     </classes>
   </test> <!-- Test -->
 </suite> <!-- Suite -->

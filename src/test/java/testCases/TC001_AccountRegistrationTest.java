@@ -13,7 +13,7 @@ import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Test;
 
 import pageObjects.AccountRegistrationPage;
-import pageObjects.HomePage;
+import pageObjects.LoginPage;
 import testBase.BaseClass;
 
 public class TC001_AccountRegistrationTest extends BaseClass {
@@ -25,15 +25,19 @@ public class TC001_AccountRegistrationTest extends BaseClass {
 		logger.info("**** Starting TC001_AccountRegistrationTest ****");
 		
 		try {
-			HomePage hp = new HomePage(driver);
+			//LoginPage hp = new LoginPage(driver);
 			
 			
-			hp.clickSignUp();
+			//hp.clickSignUp();
 			
-			logger.info("Clicked on Sign Up Link...");
+			//logger.info("Clicked on Sign Up Link...");
 			
 		
 			AccountRegistrationPage regPage = new AccountRegistrationPage(driver);
+			
+			regPage.clickSignUp();
+			
+			logger.info("Clicked on Sign Up Link...");
 			
 			logger.info("Providing user details.....");
 			

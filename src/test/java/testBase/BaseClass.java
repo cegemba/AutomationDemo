@@ -22,7 +22,7 @@ import org.testng.annotations.Test;
 
 
 import pageObjects.AccountRegistrationPage;
-import pageObjects.HomePage;
+import pageObjects.LoginPage;
 
 public class BaseClass {
 	
