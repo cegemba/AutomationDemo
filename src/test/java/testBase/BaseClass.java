@@ -10,12 +10,15 @@ import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.chrome.ChromeOptions;
 import org.openqa.selenium.edge.EdgeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.safari.SafariDriver;
 import org.testng.Assert;
 import org.testng.annotations.AfterClass;
+import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeClass;
+import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Parameters;
 import org.testng.annotations.Test;
 
@@ -31,7 +34,7 @@ public class BaseClass {
 	public Properties prop;
 	
 	
-	@BeforeClass
+	@BeforeMethod
 	@Parameters({"os", "browser"})
 	public void setUp(String os, String browser) throws IOException {
 		
@@ -44,9 +47,13 @@ public class BaseClass {
 		
 		logger= LogManager.getLogger(this.getClass()); //Log4j2	
 		
+		ChromeOptions options = new ChromeOptions(); //headless 
+        options.addArguments("--headless=new");  // use "--headless" for older versions
+        
+        
 		switch(browser.toLowerCase()) {
 		
-		case "chrome" : driver = new ChromeDriver(); break;
+		case "chrome" : driver = new ChromeDriver(options); break;
 		case "safari" : driver = new SafariDriver(); break;
 		case "firefox" : driver = new FirefoxDriver(); break;
 		default: System.out.println("Invalid browser name"); return;
@@ -63,7 +70,7 @@ public class BaseClass {
 	}
 	
 	
-	@AfterClass
+	@AfterMethod
 	public void tearDown() {
 		driver.quit();
 		
