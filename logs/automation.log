@@ -1,17 +1,28 @@
-16:28:10.092 [main] INFO  testCases.TC002_LoginTest - ******Starting TC_002_LoginTest
-16:37:52.080 [main] INFO  testCases.TC002_LoginTest - ******Starting TC_002_LoginTest
-16:49:20.168 [main] INFO  testCases.TC002_LoginTest - ******Starting TC_002_LoginTest
-16:56:10.934 [main] INFO  testCases.TC002_LoginTest - ******Starting TC_002_LoginTest
-17:00:22.215 [main] INFO  testCases.TC002_LoginTest - ******Finished TC_002_LoginTest
-16:57:29.549 [main] INFO  testCases.TC002_LoginTest - ******Starting TC_002_LoginTest
-17:00:57.000 [main] INFO  testCases.TC002_LoginTest - ******Finished TC_002_LoginTest
-17:02:49.255 [main] INFO  testCases.TC002_LoginTest - ******Starting TC_002_LoginTest
-17:05:59.635 [main] INFO  testCases.TC002_LoginTest - ******Finished TC_002_LoginTest
-17:08:04.216 [main] INFO  testCases.TC002_LoginTest - ******Starting TC_002_LoginTest
-17:14:35.251 [main] INFO  testCases.TC002_LoginTest - ******Starting TC_002_LoginTest
-17:17:51.274 [main] INFO  testCases.TC002_LoginTest - ******Finished TC_002_LoginTest
-09:33:27.597 [main] INFO  testCases.TC002_LoginTest - ******Starting TC_002_LoginTest
-09:36:55.190 [main] INFO  testCases.TC002_LoginTest - ******Finished TC_002_LoginTest
-09:41:30.566 [main] INFO  testCases.TC002_LoginTest - ******Starting TC_002_LoginTest
-09:44:25.544 [main] INFO  testCases.TC002_LoginTest - ******Starting TC_002_LoginTest
-09:46:40.946 [main] INFO  testCases.TC002_LoginTest - ******Starting TC_002_LoginTest
+15:59:31.120 [main] DEBUG testCases.TC002_LoginTest - Debug logs....
+16:03:47.569 [main] INFO  testCases.TC002_LoginTest - ******Starting TC_002_LoginTest
+16:04:06.884 [main] INFO  testCases.TC002_LoginTest - ******Login Finished TC_002_LoginTest
+16:04:37.130 [main] ERROR testCases.TC002_LoginTest - Test failed...
+16:04:37.130 [main] DEBUG testCases.TC002_LoginTest - Debug logs....
+16:13:03.883 [main] INFO  testCases.TC002_LoginTest - ******Starting TC_002_LoginTest
+16:13:21.553 [main] INFO  testCases.TC002_LoginTest - ******Login Finished TC_002_LoginTest
+16:16:21.561 [main] ERROR testCases.TC002_LoginTest - Test failed...
+16:16:21.561 [main] DEBUG testCases.TC002_LoginTest - Debug logs....
+16:20:20.405 [main] INFO  testCases.TC002_LoginTest - ******Starting TC_002_LoginTest
+16:20:38.308 [main] INFO  testCases.TC002_LoginTest - ******Login Finished TC_002_LoginTest
+16:23:38.318 [main] ERROR testCases.TC002_LoginTest - Test failed...
+16:23:38.318 [main] DEBUG testCases.TC002_LoginTest - Debug logs....
+16:31:01.669 [main] INFO  testCases.TC002_LoginTest - ******Starting TC_002_LoginTest
+16:31:20.749 [main] INFO  testCases.TC002_LoginTest - ******Login Finished TC_002_LoginTest
+16:31:20.751 [main] INFO  testCases.TC002_LoginTest - ******Finished TC_002_LoginTest
+16:36:02.191 [main] INFO  testCases.TC002_LoginTest - ******Starting TC_002_LoginTest
+16:36:21.092 [main] INFO  testCases.TC002_LoginTest - ******Login Finished TC_002_LoginTest
+16:36:21.094 [main] INFO  testCases.TC002_LoginTest - ******Finished TC_002_LoginTest
+11:31:21.368 [main] INFO  testCases.TC002_LoginTest - ******Starting TC_002_LoginTest
+11:31:38.594 [main] INFO  testCases.TC002_LoginTest - ******Login Finished TC_002_LoginTest
+11:31:38.596 [main] INFO  testCases.TC002_LoginTest - ******Finished TC_002_LoginTest
+14:32:10.510 [main] INFO  testCases.TC002_LoginTest - ******Starting TC_002_LoginTest
+14:32:27.951 [main] INFO  testCases.TC002_LoginTest - ******Login Finished TC_002_LoginTest
+14:32:27.953 [main] INFO  testCases.TC002_LoginTest - ******Finished TC_002_LoginTest
+13:39:08.743 [main] INFO  testCases.TC002_LoginTest - ******Starting TC_002_LoginTest
+13:39:47.952 [main] INFO  testCases.TC002_LoginTest - ******Login Finished TC_002_LoginTest
+13:39:47.954 [main] INFO  testCases.TC002_LoginTest - ******Finished TC_002_LoginTest

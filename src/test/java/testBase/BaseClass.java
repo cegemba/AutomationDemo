@@ -34,7 +34,7 @@ public class BaseClass {
 	public Properties prop;
 	
 	
-	@BeforeMethod
+	@BeforeMethod(groups= {"Sanity","Regression","Master"})
 	@Parameters({"os", "browser"})
 	public void setUp(String os, String browser) throws IOException {
 		
@@ -46,11 +46,13 @@ public class BaseClass {
 		
 		
 		logger= LogManager.getLogger(this.getClass()); //Log4j2	
-		
+	
 		ChromeOptions options = new ChromeOptions(); //headless 
-        options.addArguments("--headless=new");  // use "--headless" for older versions
+       // options.addArguments("--headless=new");  // use "--headless" for older versions
+		options.addArguments("--disable-notifications");
+		
         
-        
+      //driver=new ChromeDriver();
 		switch(browser.toLowerCase()) {
 		
 		case "chrome" : driver = new ChromeDriver(options); break;
@@ -70,9 +72,10 @@ public class BaseClass {
 	}
 	
 	
-	@AfterMethod
+	@AfterMethod(groups= {"Sanity","Regression","Master"})
 	public void tearDown() {
 		driver.quit();
+		
 		
 	}
 	
