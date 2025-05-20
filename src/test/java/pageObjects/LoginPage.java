@@ -2,10 +2,17 @@ package pageObjects;
 
 import java.time.Duration;
 
+import org.openqa.selenium.Alert;
 import org.openqa.selenium.By;
+import org.openqa.selenium.Dimension;
+import org.openqa.selenium.JavascriptExecutor;
+import org.openqa.selenium.NoAlertPresentException;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
+import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.FindBy;
+import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.WebDriverWait;
 
 
 public class LoginPage extends BasePage{
@@ -19,19 +26,20 @@ public class LoginPage extends BasePage{
 	
 	
 	
-	//@FindBy(xpath="//strong[text()[normalize-space(.) = \"SIGN UP\"]]") WebElement linkSignUp;
+	
 	
 	
 	@FindBy(xpath="//input[@name='email']")WebElement txtEmail;
 	
 	@FindBy(xpath="//input[@name='password']")WebElement txtPassword;
 	@FindBy(xpath="//button[text()='Login']")WebElement btnLogin;
-	//@FindBy(xpath="//button[@aria-haspopup='true' and @aria-labelledby='ksl-header-account-label'][1]")WebElement btnAccountLabel;
-	
-	@FindBy(xpath="//span[contains(@class, 'ksl-header-account-toggle--logged-in')]")WebElement profileElement;
 	
 	
-	@FindBy(xpath="//div[@class=\"ksl-header-nav-item__split\"]/a[contains(text(), \"Welcome\")]") WebElement textElement;
+	//@FindBy(xpath="//div[@class='ksl-header-nav-item__split']/a[contains(text(), 'Welcome')]") WebElement textElement;
+	
+	@FindBy(xpath="//a[contains(text(), 'Welcome')]") WebElement textElement;
+	
+	
 	
 	
 	
@@ -47,45 +55,72 @@ public class LoginPage extends BasePage{
 	
 	public void clickLogin() {
 		btnLogin.click();
-		
+
+			
 	}
 	
 	
 	
 	
 	
-	public void clickProfileElement() {
-		driver.manage().deleteAllCookies();
-		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
-		profileElement.click();
-	}
-	
-	//WebElement profileElement = driver.findElement(By.xpath("//span[contains(@class, 'ksl-header-account-toggle--logged-in')]"));
- 
-    
-    
-    public boolean isUserLoggedIn() {
-    	
-    	try {
-    		
-    		return textElement.getText().contains("Welcome");
-    		
-    	}catch(Exception e) {
-    		
-    		return false;
-    	}
-    	 
-      	 
-    	
-    }
-    
-    //@FindBy(xpath="//div[@class=\\\"ksl-header-nav-item__split\\\"]/a[contains(text(), \\\"Welcome\\\")]") WebElement textElement ;
+	/*
+	 * public void clickProfileElement() throws InterruptedException {
+	 * driver.manage().window().setSize(new Dimension(2136, 1489));
+	 * driver.manage().timeouts().pageLoadTimeout(Duration.ofSeconds(30));
+	 * driver.manage().timeouts().scriptTimeout(Duration.ofSeconds(30));
+	 * 
+	 * 
+	 * try { Alert alert = driver.switchTo().alert(); alert.dismiss(); // or
+	 * alert.accept(); } catch (NoAlertPresentException ignored) {}
+	 * 
+	 * 
+	 * 
+	 * WebElement element = new WebDriverWait(driver, Duration.ofSeconds(10))
+	 * .until(ExpectedConditions.elementToBeClickable(By.
+	 * xpath("//span[contains(@class, 'ksl-header-account-toggle--logged-in')]")));
+	 * //driver.manage().window().maximize(); //driver.manage().window().setSize(new
+	 * Dimension(2136, 1489));
+	 * 
+	 * Actions actions = new Actions(driver);
+	 * actions.moveToElement(element).pause(Duration.ofMillis(500)).perform();
+	 * 
+	 * 
+	 * //driver.manage().deleteAllCookies();
+	 * driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(100));
+	 * textElement.click();
+	 * 
+	 * 
+	 * 
+	 * //profileElement.click(); }
+	 * 
+	 * 
+	 * 
+	 * 
+	 * 
+	 * public boolean isUserLoggedIn() {
+	 * 
+	 * //WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
+	 * //WebElement link =
+	 * wait.until(ExpectedConditions.visibilityOfElementLocated(By.
+	 * xpath("div[@class='ksl-header-nav-item__split']/a[contains(text(), 'Welcome')"
+	 * )));
+	 * 
+	 * try {
+	 * 
+	 * //System.out.println(textElement.getText().contains("Welcome")); return
+	 * textElement.getText().contains("Welcome"); //return
+	 * link.getText().contains("Welcome");
+	 * 
+	 * }catch(Exception e) {
+	 * 
+	 * return false; }
+	 * 
+	 * 
+	 * 
+	 * }
+	 */
     
 
-	/*public void clickLabel() {
-		btnAccountLabel.click();
-		
-	}*/
 	
 		
 	
