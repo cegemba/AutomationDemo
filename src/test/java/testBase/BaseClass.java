@@ -1,6 +1,7 @@
 package testBase;
 
 import java.io.FileReader;
+
 import java.io.IOException;
 import java.time.Duration;
 import java.util.Properties;
@@ -8,9 +9,12 @@ import java.util.Properties;
 import org.apache.commons.lang3.RandomStringUtils;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
+import org.openqa.selenium.Cookie;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
+import org.openqa.selenium.devtools.DevTools;
+import org.openqa.selenium.devtools.v133.emulation.Emulation;
 import org.openqa.selenium.edge.EdgeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.safari.SafariDriver;
@@ -22,7 +26,7 @@ import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Parameters;
 import org.testng.annotations.Test;
 
-
+import com.google.common.base.Optional;
 
 import pageObjects.AccountRegistrationPage;
 import pageObjects.LoginPage;
@@ -50,7 +54,9 @@ public class BaseClass {
 		ChromeOptions options = new ChromeOptions(); //headless 
        // options.addArguments("--headless=new");  // use "--headless" for older versions
 		options.addArguments("--disable-notifications");
-		
+		//options.addArguments("--start-maximized");
+        options.setExperimentalOption("excludeSwitches", new String[]{"enable-automation"});
+        options.setExperimentalOption("useAutomationExtension", false);
         
       //driver=new ChromeDriver();
 		switch(browser.toLowerCase()) {
@@ -63,10 +69,15 @@ public class BaseClass {
 		
 		}
 		//driver=new ChromeDriver();
+		//SeleniumStealth stealth = new SeleniumStealth();
+       // stealth.apply(driver);
+		// Use DevTools to spoof WebDriver and other settings
+ 
 		driver.manage().deleteAllCookies();
 		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
 		
 		driver.get(prop.getProperty("url")); //reading url from properties file
+		
 		
 		
 	}
