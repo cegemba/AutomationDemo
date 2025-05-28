@@ -1,2 +1,11 @@
 12:02:38.061 [main] INFO  testCases.TC005_SRPCarsTest - **** Starting TC005_SRPCarsTest ****
 12:03:21.044 [main] INFO  testCases.TC005_SRPCarsTest - **** Ending TC005_SRPCarsTest ****
+16:05:19.058 [main] INFO  testCases.TC005_SRPCarsTest - **** Starting TC005_SRPCarsTest ****
+16:05:59.821 [main] INFO  testCases.TC005_SRPCarsTest - **** Ending TC005_SRPCarsTest ****
+16:06:16.294 [main] INFO  testCases.TC002_LoginTest - ******Starting TC_002_LoginTest
+16:06:59.931 [main] INFO  testCases.TC002_LoginTest - ******Login Finished TC_002_LoginTest
+16:06:59.932 [main] INFO  testCases.TC002_LoginTest - ******Finished TC_002_LoginTest
+08:26:20.955 [main] INFO  testCases.TC005_SRPCarsTest - **** Starting TC005_SRPCarsTest ****
+08:27:00.143 [main] INFO  testCases.TC005_SRPCarsTest - **** Ending TC005_SRPCarsTest ****
+09:25:38.521 [main] INFO  testCases.TC005_SRPCarsTest - **** Starting TC005_SRPCarsTest ****
+09:26:17.646 [main] INFO  testCases.TC005_SRPCarsTest - **** Ending TC005_SRPCarsTest ****
