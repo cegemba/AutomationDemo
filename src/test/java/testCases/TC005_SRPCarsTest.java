@@ -25,13 +25,16 @@ public class TC005_SRPCarsTest extends BaseClass {
 		lp.setEmail(prop.getProperty("email"));
 		lp.setPassword(prop.getProperty("password"));
 		lp.clickLogin();
+		
 		SRPCarsPage cars = new SRPCarsPage(driver);
 		
 		//Cookie cookie = new Cookie(prop.getProperty("cookieName"), prop.getProperty("cookieValue"));
+	
 		//driver.manage().addCookie(cookie);
 		cars.clickMarketPlaceCarsTextLink();
 		//cars.clickShowResultsBtn();
 		String totalResults = cars.getTotalResults();
+		
 		
 		 // Use regex to extract digits
         Pattern pattern = Pattern.compile("\\d+");

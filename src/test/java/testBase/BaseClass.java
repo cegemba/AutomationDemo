@@ -57,7 +57,9 @@ public class BaseClass {
 		logger= LogManager.getLogger(this.getClass()); //Log4j2	
 	
 		ChromeOptions options = new ChromeOptions(); //headless 
-       // options.addArguments("--headless=new");  // use "--headless" for older versions
+        options.addArguments("--headless=new");  // use "--headless" for older versions
+        options.addArguments("--no-sandbox");
+        options.addArguments("--disable-dev-shm-usage");
 		options.addArguments("--disable-notifications");
 		//options.addArguments("--start-maximized");
         options.setExperimentalOption("excludeSwitches", new String[]{"enable-automation"});
@@ -90,7 +92,9 @@ public class BaseClass {
 	
 	@AfterMethod(groups= {"Sanity","Regression","Master"})
 	public void tearDown() {
+	
 		driver.quit();
+		
 		
 		
 	}
