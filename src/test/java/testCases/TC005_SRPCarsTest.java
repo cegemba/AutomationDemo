@@ -8,11 +8,13 @@ import org.testng.Assert;
 import org.testng.AssertJUnit;
 import org.testng.annotations.Test;
 
+import io.github.cdimascio.dotenv.Dotenv;
 import pageObjects.LoginPage;
 import pageObjects.SRPCarsPage;
 import testBase.BaseClass;
 
 public class TC005_SRPCarsTest extends BaseClass {
+	Dotenv dotenv = Dotenv.load();
 
 	@Test(groups={"Sanity","Master"})
 	public void getTotalSearchResults() {
@@ -22,8 +24,8 @@ public class TC005_SRPCarsTest extends BaseClass {
 	   // TC002_LoginTest login = new TC002_LoginTest();
 		//login.verify_login();
 		LoginPage lp = new LoginPage(driver);
-		lp.setEmail(prop.getProperty("email"));
-		lp.setPassword(prop.getProperty("password"));
+		lp.setEmail(dotenv.get("email"));
+		lp.setPassword(dotenv.get("email"));
 		lp.clickLogin();
 		
 		SRPCarsPage cars = new SRPCarsPage(driver);
