@@ -21,3 +21,9 @@
 16:04:53.285 [main] INFO  testCases.TC005_SRPCarsTest - **** Ending TC005_SRPCarsTest ****
 16:19:16.534 [main] INFO  testCases.TC005_SRPCarsTest - **** Starting TC005_SRPCarsTest ****
 16:19:18.328 [main] INFO  testCases.TC005_SRPCarsTest - **** Ending TC005_SRPCarsTest ****
+14:19:27.093 [main] INFO  testCases.SRPClassifiedsTest - **** Starting SRPClassifiedsTest ****
+14:19:31.370 [main] INFO  testCases.SRPClassifiedsTest - **** Ending SRPClassifiedsTes ****
+14:45:16.004 [main] INFO  testCases.SRPCarsTest - **** Starting SRPCarsTest ****
+14:45:21.726 [main] INFO  testCases.SRPCarsTest - **** Ending SRPCarsTest ****
+14:45:31.890 [main] INFO  testCases.SRPClassifiedsTest - **** Starting SRPClassifiedsTest ****
+14:45:36.755 [main] INFO  testCases.SRPClassifiedsTest - **** Ending SRPClassifiedsTes ****
