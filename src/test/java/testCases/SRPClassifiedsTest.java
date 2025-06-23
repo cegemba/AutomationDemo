@@ -11,14 +11,15 @@ import org.testng.annotations.Test;
 import io.github.cdimascio.dotenv.Dotenv;
 import pageObjects.LoginPage;
 import pageObjects.SRPCarsPage;
+import pageObjects.SRPClassifiedsPage;
 import testBase.BaseClass;
 
-public class TC005_SRPCarsTest extends BaseClass {
+public class SRPClassifiedsTest extends BaseClass {
 	Dotenv dotenv = Dotenv.load();
 
 	@Test(groups={"Sanity","Master"})
 	public void getTotalSearchResults() {
-		logger.info("**** Starting TC005_SRPCarsTest ****");
+		logger.info("**** Starting SRPClassifiedsTest ****");
 	
 		try {
 	   // TC002_LoginTest login = new TC002_LoginTest();
@@ -28,14 +29,14 @@ public class TC005_SRPCarsTest extends BaseClass {
 		lp.setPassword(dotenv.get("email"));
 		lp.clickLogin();
 		
-		SRPCarsPage cars = new SRPCarsPage(driver);
+		SRPClassifiedsPage classifieds = new SRPClassifiedsPage(driver);
 		
 		//Cookie cookie = new Cookie(prop.getProperty("cookieName"), prop.getProperty("cookieValue"));
 	
 		//driver.manage().addCookie(cookie);
-		cars.clickMarketPlaceCarsTextLink();
+		classifieds.clickMarketPlaceClassifiedsTextLink();
 		//cars.clickShowResultsBtn();
-		String totalResults = cars.getTotalResults();
+		String totalResults = classifieds.getTotalResults();
 		
 		
 		 // Use regex to extract digits
@@ -67,7 +68,7 @@ public class TC005_SRPCarsTest extends BaseClass {
 			
 		}
 		
-		logger.info("**** Ending TC005_SRPCarsTest ****");
+		logger.info("**** Ending SRPClassifiedsTes ****");
 		
 		
 		
